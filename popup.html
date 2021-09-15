@@ -1,67 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
         body {
-            background-color: aqua;
-            color: white;
-        }
-        .wrapper{
-            width: 400px;
-            max-width: 90%;
-            margin: 0 auto;
-        }
-        .wrapper label {
-            display: block;
-            margin: 0.5em 0;
-        }
-        .wrapper input[type="submit"] {
-            font-size: 20px;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             color: brown;
+            font-size: 30px;
+            background-color: blanchedalmond;
         }
-        /*button {*/
-        /*    height: 30px;*/
-        /*    width: 30px;*/
-        /*    outline: none;*/
-        /*}*/
     </style>
 </head>
+
 <body>
-    <h1>Track Words</h1>
-    <img src="" id="image" alt="">
-    <script type="text/javascript">
-        let image = document.getElementById("image");
-        let images = ["green_circle.jpg", "orange_circle.jpg", "red_circle.jpg"]
-        setInterval(function (){
-            let random = Math.floor(Math.random() * 4);
-            image.src = images[random]
-        }, 800)
-    </script>
-        <div class="wrapper">
-            <form class="form">
-                <label id="nameField">
-                    <input type="text" name="nameField" required/>
-                </label>
-                <input type="submit" value="submit" name="submit" />
-            </form>
-        </div>
-<!--        <script>-->
-<!--            const wrapper = document.querySelector(".wrapper"),-->
-<!--                form = wrapper.querySelectorAll(".form"),-->
-<!--                submitInput = form[0].querySelector('input[type="submit"]');-->
+    <div>
+        Track word
+    </div>
 
-<!--            function getDataForm(e){-->
-<!--                e.preventDefault();-->
-<!--                const formData = new FormData(form[0]);-->
-<!--                alert( formData.get("nameField") + "is searching" );-->
-<!--            }-->
-
-<!--            document.addEventListener("DOMContentLoaded", function(){-->
-<!--                submitInput.addEventListener("click", getDataForm, false);-->
-<!--            }, false);-->
-
-<!--        </script>-->
-                <!--<button id="changeColor"></button>-->
-<!--<script src="popup.js"></script>-->
+    <script src="popup.js"></script>
 </body>
+
 </html>
