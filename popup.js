@@ -1,7 +1,7 @@
 myFunction = function () {
 
     let twitterState = ["healthy", "careful", "read the newspaper"]
-    let buttonColours = ["#ea440d", "#39ea0d", "#cb1032"]
+    let buttonColours = ["green", "orange", "red"]
     const ws = new WebSocket('ws://localhost:8080');
     const trackWord = "covid"
     const r = document.querySelector(':root');
@@ -20,7 +20,7 @@ myFunction = function () {
 
         const image = document.getElementById("div1");
         image.innerText = twitterState[parseInt(data) - 1]
-        r.style.setProperty("--second-color", buttonColours[parseInt(data) - 1])
+        r.style.setProperty("--first-color", buttonColours[parseInt(data) - 1])
 
         console.log(data)
 

@@ -1,13 +1,118 @@
 :root {
-  --first-color: #ea440d;
-  --second-color: #ff7;
+    --first-color: hotpink;
+    --second-color: pink;
+    --third-color: slateblue;
+    --fourth-color: LightPink;
+    --fifth-color: MediumPurple;
+    --sixth-color: purple;
+    --seventh-color: Thistle;
+    --eighth-color: Orchid;
+    --ninth-color: MediumSlateBlue;
+    --tenth-color: MediumOrchid;
+}
+
+/*body {*/
+/*  background-color: var(--second-color);*/
+/*}*/
+
+
+/*.button {*/
+/*   color: var(--second-color);*/
+/*}*/
+
+
+*, html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: var(--second-color);
+	background-image: linear-gradient(45deg, var(--second-color), var(--first-color));
+	display: grid;
+	height: 100vh;
+	place-items: center;
+}
+
+body::before {
+	animation: anim 30s infinite;
+	background-image: linear-gradient(135deg, var(--third-color), var(--first-color));
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
+		0 -2vmin 7vmin var(--sixth-color) inset;
+	content: "";
+	filter: drop-shadow(0 0 3vmin var(--seventh-color)) drop-shadow(0 5vmin 4vmin var(--eighth-color))
+		drop-shadow(2vmin -2vmin 15vmin var(--ninth-color))
+		drop-shadow(0 0 7vmin var(--tenth-color));
+	height: 50vmin;
+	width: 50vmin;
+}
+
+@keyframes anim {
+	0%,
+	100% {
+		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+		box-shadow: 0 -2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
+			0 -2vmin 7vmin var(--sixth-color) inset;
+	}
+
+	10% {
+		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+	}
+
+	20% {
+		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+	}
+
+	30% {
+		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+		box-shadow: -1vmin -2vmin 3vmin var(--fourth-color) inset,
+			-1vmin -2vmin 4vmin var(--fifth-color) inset, 1vmin -1vmin 7vmin var(--sixth-color) inset;
+	}
+
+	40% {
+		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+	}
+
+	50% {
+		border-radius: 100%;
+		box-shadow: 0 2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
+			0 2vmin 7vmin var(--sixth-color) inset;
+	}
+
+	60% {
+		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+	}
+
+	70% {
+		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+		box-shadow: 1vmin 1vmin 4vmin var(--fourth-color) inset,
+			2vmin -1vmin 4vmin var(--fifth-color) inset, -1vmin -1vmin 5vmin var(--sixth-color) inset;
+	}
+
+	80% {
+		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+	}
+
+	90% {
+		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
 }
 
 
-.button {
-   color: var(--second-color);
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  font-size: 24px;
+  border:10px solid black;
+  padding: 2rem 1rem;
+  min-height: 3em;
+  resize: both;
+  background: #ffd73e33;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
 }
