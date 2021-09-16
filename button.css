@@ -1,0 +1,13 @@
+:root {
+  --first-color: #ea440d;
+  --second-color: #ff7;
+}
+
+body {
+  background-color: var(--second-color);
+}
+
+
+.button {
+   color: var(--second-color);
+}
