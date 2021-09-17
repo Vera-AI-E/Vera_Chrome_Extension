@@ -1,15 +1,66 @@
-:root {
-    --first-color: hotpink;
-    --second-color: pink;
-    --third-color: slateblue;
-    --fourth-color: LightPink;
-    --fifth-color: MediumPurple;
-    --sixth-color: purple;
-    --seventh-color: Thistle;
-    --eighth-color: Orchid;
-    --ninth-color: MediumSlateBlue;
-    --tenth-color: MediumOrchid;
-}
+*{
+      margin:0;
+      padding:0;
+    }
+    .container {
+      background: #f0f0f0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .box {
+      border-radius: 20px;
+      width: 60px;
+      height: 60px;
+      background: #f0f0f0;
+      box-shadow:  0 0 0 #cccccc,
+                   0 0 0 #ffffff,
+                    10px 10px 10px #cccccc inset,
+                    -10px -10px 10px #ffffff inset;
+      animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+      /* animation-fill-mode: forwards; */
+    }
+
+    @keyframes anime {
+      0% {
+        width: 60px;
+        height: 60px;
+        background: #f0f0f0;
+        box-shadow:  0 0 0 #cccccc,
+                     0 0 0 #ffffff,
+                      10px 10px 10px #cccccc inset,
+                      -10px -10px 10px #ffffff inset;
+      }
+      25% {
+        width: 60px;
+        height: 60px;
+        background: #f8f8f8;
+        box-shadow:  10px 10px 10px #cccccc,
+                     10px 10px 10px #ffffff,
+                     0 0 0 #cccccc inset,
+                     0 0 0 #ffffff inset;
+      }
+      50% {
+        width: 60px;
+        height: 240px;
+        background: #f8f8f8;
+        box-shadow:  10px 10px 10px #cccccc,
+                     10px 10px 10px #ffffff,
+                     0 0 0 #cccccc inset,
+                     0 0 0 #ffffff inset;
+      }
+      100% {
+        width: 480px;
+        height: 240px;
+        background: #fafafa;
+        box-shadow:  40px 40px 40px #cccccc,
+                     0 0 0 #ffffff,
+                     0 0 0 #cccccc inset,
+                     2px 2px 2px #ffffff inset;
+      }}
 
 /*body {*/
 /*  background-color: var(--second-color);*/
@@ -21,83 +72,7 @@
 /*}*/
 
 
-*, html, body {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 
-body {
-	background-image: linear-gradient(45deg, var(--second-color), var(--first-color));
-	display: grid;
-	height: 100vh;
-	place-items: center;
-}
-
-body::before {
-	animation: anim 30s infinite;
-	background-image: linear-gradient(135deg, var(--third-color), var(--first-color));
-	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-	box-shadow: 0 -2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
-		0 -2vmin 7vmin var(--sixth-color) inset;
-	content: "";
-	filter: drop-shadow(0 0 3vmin var(--seventh-color)) drop-shadow(0 5vmin 4vmin var(--eighth-color))
-		drop-shadow(2vmin -2vmin 15vmin var(--ninth-color))
-		drop-shadow(0 0 7vmin var(--tenth-color));
-	height: 50vmin;
-	width: 50vmin;
-}
-
-@keyframes anim {
-	0%,
-	100% {
-		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
-		box-shadow: 0 -2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
-			0 -2vmin 7vmin var(--sixth-color) inset;
-	}
-
-	10% {
-		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
-	}
-
-	20% {
-		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
-	}
-
-	30% {
-		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
-		box-shadow: -1vmin -2vmin 3vmin var(--fourth-color) inset,
-			-1vmin -2vmin 4vmin var(--fifth-color) inset, 1vmin -1vmin 7vmin var(--sixth-color) inset;
-	}
-
-	40% {
-		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
-	}
-
-	50% {
-		border-radius: 100%;
-		box-shadow: 0 2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
-			0 2vmin 7vmin var(--sixth-color) inset;
-	}
-
-	60% {
-		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
-	}
-
-	70% {
-		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
-		box-shadow: 1vmin 1vmin 4vmin var(--fourth-color) inset,
-			2vmin -1vmin 4vmin var(--fifth-color) inset, -1vmin -1vmin 5vmin var(--sixth-color) inset;
-	}
-
-	80% {
-		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
-	}
-
-	90% {
-		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
-	}
-}
 
 
 body {
