@@ -11,24 +11,23 @@
     --tenth-color: MediumOrchid;
 }
 
-.ce_main {
-    width: 50px;
-    height: 50px;
+.mainContainer {
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 999999;
-
 }
-
-/*body { background: #000; }*/
 
 #indicatorBlob {
     animation:spin 4s linear infinite;
     width: 30px;
     height: 30px;
+    transition: 1s;
     margin: 14px auto auto;
     border-radius: 50%;
     box-shadow:
@@ -40,6 +39,10 @@
           0 0 5px #fff,
           -1px 0 6px var(--first-color),
           1px 0 6px var(--first-color);
+}
+
+#indicatorBlob:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
