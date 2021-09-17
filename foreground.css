@@ -1,0 +1,96 @@
+:root {
+    --first-color: hotpink;
+    --second-color: pink;
+    --third-color: slateblue;
+    --fourth-color: LightPink;
+    --fifth-color: MediumPurple;
+    --sixth-color: purple;
+    --seventh-color: Thistle;
+    --eighth-color: Orchid;
+    --ninth-color: MediumSlateBlue;
+    --tenth-color: MediumOrchid;
+}
+
+.ce_main {
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+* .ce_main .indicatorBlob {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.ce_main {
+	background-image: linear-gradient(45deg, var(--second-color), var(--first-color));
+	display: grid;
+	height: 100vh;
+	place-items: center;
+}
+
+.indicatorBlob::before {
+	animation: anim 30s infinite;
+	background-image: linear-gradient(135deg, var(--third-color), var(--first-color));
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
+		0 -2vmin 7vmin var(--sixth-color) inset;
+	content: "";
+	filter: drop-shadow(0 0 3vmin var(--seventh-color)) drop-shadow(0 5vmin 4vmin var(--eighth-color))
+		drop-shadow(2vmin -2vmin 15vmin var(--ninth-color))
+		drop-shadow(0 0 7vmin var(--tenth-color));
+	height: 50vmin;
+	width: 50vmin;
+}
+
+@keyframes anim {
+	0%,
+	100% {
+		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+		box-shadow: 0 -2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
+			0 -2vmin 7vmin var(--sixth-color) inset;
+	}
+
+	10% {
+		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+	}
+
+	20% {
+		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+	}
+
+	30% {
+		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+		box-shadow: -1vmin -2vmin 3vmin var(--fourth-color) inset,
+			-1vmin -2vmin 4vmin var(--fifth-color) inset, 1vmin -1vmin 7vmin var(--sixth-color) inset;
+	}
+
+	40% {
+		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+	}
+
+	50% {
+		border-radius: 100%;
+		box-shadow: 0 2vmin 3vmin var(--fourth-color) inset, 0 1vmin 4vmin var(--fifth-color) inset,
+			0 2vmin 7vmin var(--sixth-color) inset;
+	}
+
+	60% {
+		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+	}
+
+	70% {
+		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+		box-shadow: 1vmin 1vmin 4vmin var(--fourth-color) inset,
+			2vmin -1vmin 4vmin var(--fifth-color) inset, -1vmin -1vmin 5vmin var(--sixth-color) inset;
+	}
+
+	80% {
+		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+	}
+
+	90% {
+		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
+}
