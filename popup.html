@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="popup.css">
+<!--    <link rel="stylesheet" type="text/css" href="popup.css">-->
+    <style>
+        .wrapper label {
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+        .wrapper label input {
+            font-size: 18px;
+            padding: 0.5cm;
+        }
 
+        .wrapper input[type="submit"] {
+            font-size: 20px;
+            color: aqua;
+        }
+    </style>
     <title>VERA</title>
 </head>
 <body>
-    <div class="box">
-        <div class="content">
-            <h2>Insert your Keyword here:</h2>
-            <button type="button" id="button">
-                <span class="button__text">Analyse</span>
-            </button>
-            <script src="popup.js"></script>
-        </div>
+<div class="box">
+    <div class="content">
+        <h2>Insert keyword here:</h2>
+
+        <form class="form">
+            <label id="keyWord">
+                <input type="text" name="keyWord" placeholder="Keyword" required>
+            </label>
+            <input type="submit" value="submit" name="submit"/>
+        </form>
+
+        <script src="popup.js"></script>
     </div>
+</div>
 </body>
 </html>
