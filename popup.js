@@ -1,6 +1,10 @@
 function getDataForm(e) {
     e.preventDefault();
     const formData = new FormData(form[0]);
+    const loadMSG = document.querySelector(".txt");
+
+      
+
 
     let responseArray = [];
 
@@ -10,6 +14,7 @@ function getDataForm(e) {
     const trackWord = formData.get('keyWord');
 
     const r = document.querySelector(':root');
+    r.style.setProperty("--analyse-op", "100");
 
 
     ws.onopen = function (eve)  {
@@ -25,7 +30,7 @@ function getDataForm(e) {
         responseArray.push(data);
 
         if (responseArray.length === 10){
-
+            loadMSG.innerHTML= twitterState[parseInt(responseArray[responseArray.length - 1])]
             r.style.setProperty("--color-two", buttonColours[parseInt(responseArray[responseArray.length - 1])]);
             submitInput.classList.remove("button--loading")
             ws.close();
