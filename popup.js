@@ -26,17 +26,15 @@ function getDataForm(e) {
 
         if (responseArray.length === 10){
 
-            const displayText = document.getElementById("div1");
-
-            displayText.innerText = twitterState[parseInt(responseArray[responseArray.length - 1])];
-            r.style.setProperty("--first-color", buttonColours[parseInt(data) - 1]);
+            r.style.setProperty("--color-two", buttonColours[parseInt(responseArray[responseArray.length - 1])]);
+            submitInput.classList.remove("button--loading")
+            ws.close();
         }
     };
 }
 
-const wrapper = document.querySelector(".wrapper") ,
-    form = document.querySelectorAll(".form"),
-    submitInput = form[0].querySelector("input[type='submit']");
+const form = document.querySelectorAll(".form"),
+    submitInput = form[0].querySelector(".button");
 
 
 document.addEventListener("DOMContentLoaded", function (){
