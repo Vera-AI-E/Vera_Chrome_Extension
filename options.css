@@ -54,12 +54,12 @@ p {
 .profile-card {
   background: #FFB300;
   width: 56px;
-  height: 56px;
+  height: 156px;
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 2;
-  overflow: hidden;
+  /*overflow: hidden;*/
   opacity: 0;
   margin-top: 70px;
   -webkit-transform: translate(-50%, -50%);
@@ -90,6 +90,10 @@ p {
 
 .profile-card header h1 {
   color: #FF5722;
+  font-family: 'Bebas Neue', cursive;
+}
+.profile-card header h2 {
+  font-family: 'Bebas Neue', cursive;
 }
 
 .profile-card header a {
@@ -113,8 +117,8 @@ p {
   background: linear-gradient(#2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%);
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -webkit-animation: scaleIn 0.3s 3.5s ease forwards;
   animation: scaleIn 0.3s 3.5s ease forwards;
 }
@@ -137,7 +141,7 @@ p {
 
 .profile-card .profile-bio {
   width: 175px;
-  height: 180px;
+  height: 250px;
   display: inline-block;
   float: right;
   padding: 50px 20px 30px 20px;
@@ -145,6 +149,7 @@ p {
   color: #333333;
   margin-top: 50px;
   text-align: center;
+  font-family: 'Bebas Neue', cursive;
   opacity: 0;
   -webkit-animation: moveIn 1s 3.1s ease forwards;
   animation: moveIn 1s 3.1s ease forwards;
@@ -177,9 +182,9 @@ p {
 .profile-social-links li a {
   display: inline-block;
   color: red;
-  width: 24px;
-  height: 24px;
-  padding: 6px;
+  width: 170px;
+  height: 170px;
+  padding: 10px;
   position: relative;
   overflow: hidden!important;
   -webkit-border-radius: 50%;
@@ -193,7 +198,7 @@ p {
 
 .profile-social-links li a img,
 .profile-social-links li a svg {
-  width: 24px;
+  width: 150px;
 }
 
 @-webkit-keyframes init {
