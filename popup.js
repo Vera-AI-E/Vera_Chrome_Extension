@@ -1,13 +1,14 @@
-myFunction = function () {
+function getDataForm(e) {
+    e.preventDefault();
+    const formData = new FormData(form[0]);
 
     let responseArray = [];
-    const btn = document.getElementById("button");
-    btn.classList.add("button--loading");
 
     let twitterState = ["healthy", "careful", "read the newspaper"];
     let buttonColours = ["green", "orange", "red"];
     const ws = new WebSocket('ws://localhost:8080');
-    const trackWord = "covid";
+    const trackWord = formData.get('keyWord');
+
     const r = document.querySelector(':root');
 
 
@@ -25,7 +26,6 @@ myFunction = function () {
 
         if (responseArray.length === 10){
 
-            btn.classList.remove("button--loading");
             const displayText = document.getElementById("div1");
 
             displayText.innerText = twitterState[parseInt(responseArray[responseArray.length - 1])];
@@ -34,18 +34,10 @@ myFunction = function () {
     };
 }
 
-// document.getElementById("search-btn").addEventListener("click", myFunction);
-
 const wrapper = document.querySelector(".wrapper") ,
     form = document.querySelectorAll(".form"),
     submitInput = form[0].querySelector("input[type='submit']");
 
-function getDataForm(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form[0]);
-    alert ( formData.get('keyWord') );
-}
 
 document.addEventListener("DOMContentLoaded", function (){
     submitInput.addEventListener("click", getDataForm, false);
